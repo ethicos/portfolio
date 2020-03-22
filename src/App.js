@@ -5,9 +5,9 @@ import { Layout,Header,Navigation,Drawer,Content} from 'react-mdl';
 import {Link} from 'react-router-dom';
 function App() {
   return (
-    <div style={{height: '300px', position: 'relative'}}>
-    <Layout fixedHeader>
-        <Header title={<span><span style={{ color: '#ddd' }}>Area / </span><strong>Manuprasad M</strong></span>}>
+    <div className="demo-big-content">
+    <Layout>
+        <Header className="header-color" title="Manuprasad M" scroll>
             <Navigation>
                 <Link to="/resume">Resume</Link>
                 <Link to="/about">About Me</Link>
@@ -15,7 +15,7 @@ function App() {
                 <Link to="/contact">Contact</Link>
             </Navigation>
         </Header>
-        <Drawer title="Title">
+        <Drawer title="Manuprasad M">
             <Navigation>
                 <Link to="/resume">Resume</Link>
                 <Link to="/about">About Me</Link>
@@ -23,8 +23,10 @@ function App() {
                 <Link to="/contact">Contact</Link>
             </Navigation>
         </Drawer>
-        <Main/>
-        <Content />
+        <Content>
+        <div className="page-content" />
+          <Main/>
+        </Content>
     </Layout>
 </div>
   );
